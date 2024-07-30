@@ -26,6 +26,9 @@ import { FaDotCircle } from "react-icons/fa";
 import zono from "../images/zono.png"
 import { RxCross2 } from "react-icons/rx";
 
+import secondP from "../images/secondP.png"
+import { RiErrorWarningLine } from "react-icons/ri";
+
 function ui() {
   const [isExpanded, setIsExpanded] = useState(true);
 
@@ -58,11 +61,10 @@ function ui() {
                 {isExpanded && <span className=' '>Account&nbsp;Statements</span>}
               </button>
               <button className="flex items-center bg-gray-[#0c123c] w-full text-left focus:outline-none hover:bg-gray-700 mb-1 my-2 py-[6px]">
-                <div className='w-7 h-7 mr-2 mx-2 p-1'><RiUser3Line className="w-5 h-5 " /></div>
+                <div className='w-7 h-7 mr-2 mx-2 p-1'>7</div>
                 {isExpanded && <span className=' '>Contacts</span>}
               </button>
               <hr className='border my-3 w-full border-gray-700'/>
-
               <button className="flex items-center bg-gray-[#0c123c] w-full text-left focus:outline-none hover:bg-gray-700 mb-1 my-2 py-[6px]">
                 <div className='w-7 h-7 mr-2 mx-2 p-1'><LuIndianRupee className="w-5 h-5 " /></div>
                 {isExpanded && <><span className=' '>Loans</span><button className='bg-green-600 rounded-xl text-white px-3 ms-2 text-xs py-[1px]'>NEW</button></>}
@@ -92,7 +94,7 @@ function ui() {
         </div>
       </div>
 
-      <div className=' w-full h-[900px] bg-[#0d1219]'>
+      <div className=' w-full h-[1800px] bg-[#0d1219]'>
 
         <div className=' flex justify-end mt-2'>
           <button className="bg-blue-600 px-5 text-sm py-2 text-white grid grid-cols-12 "><IoAddOutline className=' col-span-3 ms-auto w-4 h-4 me-1 my-auto'/><span className=' col-span-9 '>PAYOUT</span></button>
@@ -185,6 +187,52 @@ function ui() {
             </div>
           </div>
 
+          <div className=' flex justify-between mt-12'><span className=' text-gray-100'>Insights</span><span className='text-blue-500 flex '>Detailed Insight <FaArrowRightLong className='my-auto ms-[1px]'/></span></div>
+          <div className=' mt-1 bg-gray-800 pt-5 pb-1'>
+            <div className='text-gray-400 mt-5 mx-5'>Payout volume - last 30 days</div>
+            <div className='text-gray-400 mt-0 mx-5 text-2xl flex'><span className='text-base'><LuIndianRupee className='mt-2 me-1' /></span>236,695</div>
+            <img src={secondP} />
+          </div>
+          
+          <div className=' mt-10 bg-gray-800 pt-5 pb-8'>
+            <div className='flex justify-between mx-4'>
+              <div className='flex text-gray-100 '><span className='my-auto'>Activity Feed </span>&nbsp;<RiErrorWarningLine className='my-auto text-gray-400 text-sm'/><span className=' text-gray-400 text-sm my-auto'>&nbsp;updated a few second ago</span></div>
+              <div className='me-10'>
+                <select defaultValue={true} className='px-0 py-2 rounded-lg text-blue-300 outline-none w-full bg-gray-800 ' >
+                  <option className='' value={true}>Show Filters</option>
+                  <option className='' value={false}>inActive</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="mx-20 mt-8 h-20 lined-border bg-gradient-to-r from-gray-700 via-gray-800 to-gray-800 flex mb-5">
+              <div className='text-gray-100 ms-20 my-auto text-sm'>23 JUL <br/><span className='text-gray-500 text-xs'>Tuesday</span></div>
+              <div className=' mt-4 mb-4 ms-12 border-r-2 border-gray-500'></div>
+              <div className='my-auto ms-12'><RiUser3Line className="w-4 h-4 text-gray-100" /></div>
+              <div className='my-auto ms-5 text-gray-400 text-sm '>contact created</div>
+            </div>
+            <div className="mx-20 mt-8 h-20 lined-border bg-gradient-to-r from-gray-700 via-gray-800 to-gray-800 flex mb-5">
+              <div className='text-gray-100 ms-20 my-auto text-sm'>23 JUL <br/><span className='text-gray-500 text-xs'>Tuesday</span></div>
+              <div className=' mt-4 mb-4 ms-12 border-r-2 border-gray-500'></div>
+              <div className='my-auto ms-12'><img className=' w-8' src={header1} /></div>
+              <div className='my-auto ms-5 text-gray-400 text-xs'><span className='text-sm text-gray-100'>300</span>.00 credited into the account</div>
+            </div>
+            <div className="mx-20 mt-8 h-20 lined-border bg-gradient-to-r from-gray-700 via-gray-800 to-gray-800 flex mb-5">
+              <div className='text-gray-100 ms-20 my-auto text-sm'>23 JUL <br/><span className='text-gray-500 text-xs'>Tuesday</span></div>
+              <div className=' mt-4 mb-4 ms-12 border-r-2 border-gray-500'></div>
+              <div className='my-auto ms-12'><img className=' w-8' src={header1} /></div>
+              <div className='my-auto ms-5 text-gray-400 text-xs'><span className='text-sm text-gray-100'>1</span>payout worth <span className='text-sm text-gray-100'>2,36,396</span>.00 created</div>
+            </div>
+            <div className="mx-20 mt-8 h-20 lined-border bg-gradient-to-r from-gray-700 via-gray-800 to-gray-800 flex mb-5">
+              <div className='text-gray-100 ms-20 my-auto text-sm'>23 JUL <br/><span className='text-gray-500 text-xs'>Tuesday</span></div>
+              <div className=' mt-4 mb-4 ms-12 border-r-2 border-gray-500'></div>
+              <div className='my-auto ms-12'><img className=' w-8' src={header1} /></div>
+              {/* <div className='my-auto ms-5 text-gray-400 text-xs'><span className='text-sm text-gray-100'>1</span>payout worth <span className='text-sm text-gray-100'>2,36,396</span>.00 created</div> */}
+            </div>
+
+            <div className='text-center text-sm'><button className='py-1 px-5 bg-gray-700 text-gray-100'>LOOK FOR OLDER ACTIVITIES </button></div>
+
+          </div>
         </div>
 
       </div>
